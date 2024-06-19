@@ -7,14 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplayCardComponent } from './shared/components/display-card/display-card.component';
-import { FarmLayoutComponent } from './components/farm-layout/farm-layout.component';
 import { AdminLayoutComponent } from './components/admin-layout/admin-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayCardComponent,
-    AdminLayoutComponent, 
+    DisplayCardComponent,     
   ],
   imports: [
     BrowserModule,
