@@ -18,11 +18,11 @@ const routes: Routes = [
     loadChildren: () => import('./RegistrationAndLogin/registration/registration.module').
       then(x => x.RegistrationModule)
   },
-  {
-    path: 'crops',
-    loadChildren: () => import('./components/farm-layout/farm-layout.module').
-      then(x => x.FarmLayoutModule)
-  },
+  // {
+  //   path: 'crops',
+  //   loadChildren: () => import('./components/farmer-layout/crops-dashboard/crops-dashboard.component').
+  //     then(x => x.FarmLayoutModule)
+  // },
 ];
 
 @NgModule({

@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { HeaderComponent } from './header/header.component';
 
 const ComponentsToBind = [
-    FileUploadComponent
+    FileUploadComponent,
+    HeaderComponent
 ]
 const ModuleToBind = [
   NgbModule,

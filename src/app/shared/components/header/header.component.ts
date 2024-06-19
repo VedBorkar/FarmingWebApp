@@ -4,27 +4,26 @@ import { Router, RouterLink } from '@angular/router';
 import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
-  selector: 'header',
+  selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'
-  ],
-  imports: [NgFor, NgIf, RouterLink],
-  standalone: true
+  ]
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   userFirstName = '';
   userID = 0;
   loggedIn = false;
 
-  constructor(private authService: DataService) {}
+  constructor(private authService: DataService) { }
 
   ngOnInit() {
-    this.userFirstName = (this.authService.getUserName());
-    this.userID = (this.authService.getUserID());
-    if (this.userID != 0 ){
+    // this.userFirstName = (this.authService.getUserName());
+    this.userFirstName = JSON.parse(localStorage.getItem("UserName") || "");
+    this.userID = JSON.parse(localStorage.getItem("userID") || "");
+    if (this.userID != 0) {
       this.loggedIn = true;
-   }
+    }
   }
 
-  
+
 }

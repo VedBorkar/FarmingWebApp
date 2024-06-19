@@ -28,6 +28,7 @@ export class LoginComponent {
       if (response["successful"] && response["data"].length>0) {  
         this.authService.setUserID(response["data"][0]["ID"]);
         this.authService.setUserName(response["data"][0]["FirstName"]);
+        
         this.router.navigate(['./dashboard']);
       } else {
         alert("Incorrect email or password.\n ")

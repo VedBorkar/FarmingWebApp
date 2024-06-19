@@ -33,6 +33,6 @@ export class DashboardComponent implements OnInit{
 
   storeFarmName(data: any) {
     this.authService.setFarmData(data);
-    this.router.navigate(['crops']);
+    this.router.navigate(['dashboard/crops']);
   }
 }

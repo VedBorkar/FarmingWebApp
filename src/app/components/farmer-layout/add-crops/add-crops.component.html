@@ -1,40 +1,41 @@
 <div class="add-farm-bg container-fluid">
-        <div class="col-sm-12 text-start" style="padding: 10px;">
+  <div class="col-sm-12 text-start" style="padding: 10px;">
 
-            <button class="btn btn-dark" routerLink="/crops">Go to crops</button>
-        </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="_lk_de">
-              <div class="form-03-main">
-    
-                <h1 style="text-align: center ;"><b>Add new crop</b></h1>
-    
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown button
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item">Action</a></li>
-                      <li><a class="dropdown-item">Another action</a></li>
-                      <li><a class="dropdown-item">Something else here</a></li>
-                    </ul>
-                  </div>
-    
-                <div class="form-group-02">
-                    <input type="text" class="form-control _ge_de_ol" type="text" placeholder="Details (acres, features etc.)"
-                    [(ngModel)]="CropModel['farmID']" id="userFirstName" #userID="ngModel"/>
-                </div>
-    
-                <file-upload></file-upload>
-    
-                <div class="form-group-02">
-                    <button type="submit" (click)="addCrop(CropModel)" class="_btn_04">Add</button>
-                </div>
-              </div>
+    <button class="btn btn-dark" routerLink="/dashboard/crops">Go to crops</button>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="_lk_de">
+          <div class="form-03-main">
+
+            <h1 style="text-align: center ;"><b>Add new crop</b></h1>
+
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item">Action</a></li>
+                <li><a class="dropdown-item">Another action</a></li>
+                <li><a class="dropdown-item">Something else here</a></li>
+              </ul>
+            </div>
+
+            <div class="form-group-02">
+              <input type="text" class="form-control _ge_de_ol" type="text" placeholder="Details (acres, features etc.)"
+                [(ngModel)]="CropModel['farmID']" id="userFirstName" #userID="ngModel" />
+            </div>
+
+            <file-upload></file-upload>
+
+            <div class="form-group-02">
+              <button type="submit" (click)="addCrop(CropModel)" class="_btn_04">Add</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>

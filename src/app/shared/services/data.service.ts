@@ -11,19 +11,21 @@ export class DataService {
   constructor() { }
 
   setUserName(name: string): void {
+    localStorage.setItem("UserName", JSON.stringify(name));
     this.userName = name;
   }
 
   getUserName(): string {
-    return this.userName;
+    return this.userName = JSON.parse(localStorage.getItem("UserName") || "");
   }
 
   setUserID(ID: number): void {
+    localStorage.setItem("userID", JSON.stringify(ID));
     this.userID = ID;
   }
 
   getUserID(): number {
-    return this.userID;
+    return this.userID = JSON.parse(localStorage.getItem("userID") || "");
   }
 
   setFarmData(farmData: any): void {

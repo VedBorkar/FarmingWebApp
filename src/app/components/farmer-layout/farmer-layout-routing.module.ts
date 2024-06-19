@@ -12,6 +12,10 @@ const routes: Routes = [
     children: [     
       {
         path: '',
+        component: DashboardComponent
+      },
+      {
+        path: 'crops',
         component: CropsDashboardComponent
       },
       {

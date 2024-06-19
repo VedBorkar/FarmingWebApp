@@ -5,6 +5,8 @@ import { AdminLayoutRoutingModule } from './admin-layout-routing.module';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminLayoutComponent } from './admin-layout.component';
 import { MasterDataComponent } from './master-data/master-data.component';
+import { FarmerSharedModule } from 'src/app/shared/components/farmer-shared-components.module';
+
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { MasterDataComponent } from './master-data/master-data.component';
   ],
   imports: [
     CommonModule,
-    AdminLayoutRoutingModule
+    AdminLayoutRoutingModule,
+    FarmerSharedModule
   ]
 })
 export class AdminLayoutModule { }
