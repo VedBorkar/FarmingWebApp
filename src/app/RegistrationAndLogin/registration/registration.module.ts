@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { RegistrationRoutingModule } from './registration-routing.module';
 import { RegistrationComponent } from './registration.component';
+import { FarmerSharedModule } from 'src/app/shared/components/farmer-shared-components.module';
 
 
 @NgModule({
   declarations: [RegistrationComponent],
-  imports: [
-    CommonModule,
-    RegistrationRoutingModule
+  imports: [    
+    RegistrationRoutingModule,
+    FarmerSharedModule
   ]
 })
-export class RegistrationModule { }
+export class RegistrationModule {}

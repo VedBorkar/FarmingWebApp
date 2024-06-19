@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div style="padding-left: 20px; padding-top: 15px;" *ngIf="loggedIn">
+        <button class="btn btn-success" routerLink="/dashboard/add_farm">Add Farm</button>
+    </div>
+    <div class="row" style="padding-left: 20px; padding-top: 15px;">
+
+        <div class="col-3" *ngFor="let data of FarmList" style="padding-bottom: 50px;">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-title">
+                    <img src="..\..\..\..\assets\images\farm1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ data.farmName }}</h5>
+                        <p class="card-text">{{ data.farmDescription }} </p>
+                        <a class="btn btn-farmerapp" (click)="storeFarmName(data)" routerLink="/crops">Check Status</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

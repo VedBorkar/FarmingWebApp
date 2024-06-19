@@ -3,15 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistrationComponent } from './RegistrationAndLogin/registration/registration.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DisplayCardComponent } from './shared/components/display-card/display-card.component';
+import { FarmLayoutComponent } from './components/farm-layout/farm-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayCardComponent, 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
