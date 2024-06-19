@@ -8,9 +8,9 @@ import { DataService } from 'src/app/shared/services/data.service';
   selector: 'farm',
   templateUrl: './farm.component.html',
   styleUrls: ['./farm.component.scss',
-    "../../../../assets/css/bootstrap.min.css",
-    "../../../../assets/css/font-awesome.min.css",
-    "../../../../assets/css/style.css"
+    // "../../../../assets/css/bootstrap.min.css",
+    // "../../../../assets/css/font-awesome.min.css",
+    // "../../../../assets/css/style.css"
   ]
 })
 export class FarmComponent {

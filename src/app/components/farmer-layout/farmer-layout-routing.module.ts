@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FarmerLayoutComponent } from './farmer-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CropsDashboardComponent } from './crops-dashboard/crops-dashboard.component';
+import { AddCropsComponent } from './add-crops/add-crops.component';
 
 const routes: Routes = [
   {
     path: '',
     component: FarmerLayoutComponent,
-    children: [
+    children: [     
       {
         path: '',
-        component: DashboardComponent
+        component: CropsDashboardComponent
+      },
+      {
+        path: 'add-crops',
+        component: AddCropsComponent
       },
       {
         path: 'master',

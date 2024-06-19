@@ -6,9 +6,9 @@ import { RegistrationService } from 'src/app/shared/services/registration.servic
   selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss',
-    "../../../assets/css/bootstrap.min.css",
-    "../../../assets/css/font-awesome.min.css",
-    "../../../assets/css/style.css"
+    // "../../../assets/css/bootstrap.min.css",
+    // "../../../assets/css/font-awesome.min.css",
+    // "../../../assets/css/style.css"
   ]
 })
 export class LoginComponent {
@@ -16,6 +16,7 @@ export class LoginComponent {
   public userEmail: string = "";
   public TitleName: string = "Sign In";
   public password: string = "";
+  LoginFormFlag: boolean = true;
   constructor(public router: Router, private registrationService: RegistrationService, private authService: DataService) {
     // this.password = environment.userCredentials.password;
     // this.userID = environment.userCredentials.emailID;
@@ -34,4 +35,22 @@ export class LoginComponent {
     });
   }
 
+  public userInfoModel: any = {};
+  public emailId: string = "";
+  public userFirstName: string = "";
+  public userLastName: string = "";
+  public userMobileNumber: string = "";
+
+  setInfo(userCredentialModel: any) {
+
+    this.registrationService.userRegistration(userCredentialModel).subscribe((response) => {
+      if (response && response["successful"] && response["data"][0] && response["data"][0]['Message']) {
+        alert(response["data"][0]['Message']);
+        this.LoginFormFlag = true;
+      } else {
+        alert(response["data"][0]['Message']);
+        this.LoginFormFlag = true;
+      }
+    });
+  }
 }

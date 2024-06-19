@@ -1,105 +1,42 @@
-<!-- <div class="container-fluid"> 
-    <h4 class="text-center" style="padding-top: 10em;">Register</h4>
-
+<section class="container-fluid bg-imge">
         <div class="row">
-            <div class="col-sm-6 text-end"><span>First Name</span></div>
-            <div class="col-sm-6 "><input type="text" [(ngModel)]="userCredentialModel['userFirstName']" id="userFirstName" #userID="ngModel" /></div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6 text-end"><span>Last Name</span></div>
-            <div class="col-sm-6 "><input type="text" [(ngModel)]="userCredentialModel['userLastName']" id="userLastName"
-                    #userID="ngModel" /></div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6 text-end"><span>Mobile Number</span></div>
-            <div class="col-sm-6 "><input type="text" [(ngModel)]="userCredentialModel['userMobileNumber']" id="userMobileNumber"
-                    #userID="ngModel" /></div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6 text-end"><span>Email Address</span></div>
-            <div class="col-sm-6 "><input type="text" [(ngModel)]="userCredentialModel['emailID']" id="emailID"
-                    #userID="ngModel" /></div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6 text-end"><span>Password</span></div>
-            <div class="col-sm-6"><input type="password" [(ngModel)]="userCredentialModel['password']" id="password"
-                    #password="ngModel" />
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6"></div>
-            <div class="col-sm-6 text-start">
-                <button type="submit" class="btn btn-secondary" (click)="setInfo(userCredentialModel)">Register</button>
-            </div>
-        </div>
-</div> -->
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../../assets/css/style.css" rel="stylesheet">
-
-  </head>
-  <body>
-    <section class="form-02-main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="_lk_de">
-              <div class="form-03-main">
-                <div class="logo-02">
+          <div class="col-md-4"></div>
+              <div class="col-md-4 paddingLogin">
+                <div class="img-fluid text-center pb-3"  >
                   <img src="assets/images/user.png">
                 </div>
 
-                <div class="form-group-02">
+                <div>
                     <input type="text" class="form-control _ge_de_ol" type="text" placeholder="First Name*" required="" aria-required="true"
                     [(ngModel)]="userCredentialModel['userFirstName']" id="userFirstName" #userID="ngModel" />
                   </div>
 
-                <div class="form-group-02">
+                <div>
                     <input type="text" class="form-control _ge_de_ol" type="text" placeholder="Last Name"
                     [(ngModel)]="userCredentialModel['userLastName']" id="userLastName" #userID="ngModel" />
                 </div>
 
-                <div class="form-group-02">
+                <div>
                     <input type="text" class="form-control _ge_de_ol" type="text" placeholder="Mobile Number"
                     [(ngModel)]="userCredentialModel['userMobileNumber']" id="userMobileNumber" #userID="ngModel" />
                 </div>
 
-                <div class="form-group-02">
+                <div>
                     <input type="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Email*" required="" aria-required="true"
                     [(ngModel)]="userCredentialModel['emailID']" id="emailID" #userID="ngModel" />
                 </div>
 
-                <div class="form-group-02">
+                <div>
                     <input type="password" name="password" class="form-control _ge_de_ol" placeholder="Set Password*" required="" aria-required="true"
                     [(ngModel)]="userCredentialModel['password']" id="password" #password="ngModel" />
                 </div>
 
-                <div class="form-group-02">
+                <div>
                     <button type="submit" class="_btn_04" (click)="setInfo(userCredentialModel)">Register</button>
                 </div>
                 <div class="form-group-02 text-center">
-                  <a routerLink="">Already have an account? Log in</a>
+                  Already have an account? <a routerLink="">Log in</a>
                 </div>
               </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </body>
-</html>
+</section>

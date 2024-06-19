@@ -6,8 +6,7 @@ import { DataService } from 'src/app/shared/services/data.service';
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss',
-    "../../../assets/css/bootstrap1.min.css"
+  styleUrls: ['./header.component.scss'
   ],
   imports: [NgFor, NgIf, RouterLink],
   standalone: true

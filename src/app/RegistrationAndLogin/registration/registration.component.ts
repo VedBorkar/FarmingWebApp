@@ -6,9 +6,9 @@ import { Subscription } from 'rxjs';
   selector: 'registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss',
-    "../../../assets/css/bootstrap.min.css",
-    "../../../assets/css/font-awesome.min.css",
-    "../../../assets/css/style.css"
+    // "../../../assets/css/bootstrap.min.css",
+    // "../../../assets/css/font-awesome.min.css",
+    // "../../../assets/css/style.css"
   ]
 })
 export class RegistrationComponent {

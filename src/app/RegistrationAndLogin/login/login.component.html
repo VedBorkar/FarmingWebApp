@@ -1,60 +1,102 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<div class="container-fluid bg-imge">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 paddingLogin">
+      <div class="row border p-4 form-bg b-r-5 " *ngIf="LoginFormFlag==true">
+        <div class="col-md-12 text-center">
 
-    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../../assets/css/style.css" rel="stylesheet">
+          <img class="img-fluid pb-3" src="assets/images/user.png">
 
-  </head>
-  <body>
-    <section class="form-02-main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="_lk_de">
-              <div class="form-03-main">
-                <div class="logo-01">
-                  <img src="assets/images/user.png">
-                </div>
-                <div class="form-group-01">
-                  <input type="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Enter Email" required="" aria-required="true"
-                  [(ngModel)]="userCredentialModel['userID']" id="userID" #userID="ngModel" />
-                </div>
+        </div>
+        <div class="col-md-12 text-center">
 
-                <div class="form-group-01">
-                  <input type="password" name="password" class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="" aria-required="true"
-                  input type="password" [(ngModel)]="userCredentialModel['password']" id="password" #password="ngModel" />
-                </div>
-
-                <div class="checkbox form-group-01">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
-                    <label class="form-check-label" for="">
-                      Remember me
-                    </label>
-                  </div>
-                  <a href="#">Forgot Password</a>
-                </div>
-
-                <div class="form-group-01">
-                    <button type="submit" class="_btn_04" (click)="verifyCredentials(userCredentialModel)">Log In</button>
-                </div>
-                <div class="form-group-01 text-center">
-                      <a routerLink="/registration">Create account</a>
+          <div>
+            <input type="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Enter Email"
+              required="" aria-required="true" [(ngModel)]="userCredentialModel['userID']" id="userID"
+              #userID="ngModel" />
+          </div>
+        </div>
+        <div class="col-md-12 text-center pt-2">
+          <div class=>
+            <input type="password" name="password" class="form-control _ge_de_ol" type="text"
+              placeholder="Enter Password" required="" aria-required="true" input type="password"
+              [(ngModel)]="userCredentialModel['password']" id="password" #password="ngModel" />
+          </div>
+        </div>
+        <div class="col-md-12 pt-2">
+          <div class="row">
+            <div class="col-6">
+              <div class="checkbox">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
+                    Remember me
+                  </label>
                 </div>
               </div>
             </div>
+            <div class="col-6 text-end"><a href="#">Forgot Password</a></div>
           </div>
         </div>
+
+
+        <div class="col-md-12 pt-2">
+          <button type="submit" class="btn btn-primary w-100" (click)="verifyCredentials(userCredentialModel)">Log
+            In</button>
+        </div>
+        <div class="col-md-12 pt-4 text-end">
+          Don't have a account? <a class="text-blue" (click)="LoginFormFlag = !LoginFormFlag">Create account</a>
+        </div>
       </div>
-    </section>
-  </body>
-</html>
+      <div class="row border p-4 form-bg b-r-5 " *ngIf="LoginFormFlag==false">
+        
+            <div class="col-md-12 paddingLogin">
+              <div class="img-fluid text-center pb-3"  >
+                <img src="assets/images/user.png">
+              </div>
+
+              <div>
+                  <input type="text" class="form-control _ge_de_ol" type="text" placeholder="First Name*" required="" aria-required="true"
+                  [(ngModel)]="userInfoModel['userFirstName']" id="userFirstName" #userID="ngModel" />
+                </div>
+
+              <div>
+                  <input type="text" class="form-control _ge_de_ol" type="text" placeholder="Last Name"
+                  [(ngModel)]="userInfoModel['userLastName']" id="userLastName" #userID="ngModel" />
+              </div>
+
+              <div>
+                  <input type="text" class="form-control _ge_de_ol" type="text" placeholder="Mobile Number"
+                  [(ngModel)]="userInfoModel['userMobileNumber']" id="userMobileNumber" #userID="ngModel" />
+              </div>
+
+              <div>
+                  <input type="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Email*" required="" aria-required="true"
+                  [(ngModel)]="userInfoModel['emailID']" id="emailID" #userID="ngModel" />
+              </div>
+
+              <div>
+                  <input type="password" name="password" class="form-control _ge_de_ol" placeholder="Set Password*" required="" aria-required="true"
+                  [(ngModel)]="userInfoModel['password']" id="password" #password="ngModel" />
+              </div>
+
+              <div>
+                  <button type="submit" class="_btn_04" (click)="setInfo(userInfoModel)">Register</button>
+              </div>
+              <div class="form-group-02 text-center">
+                Already have an account? <a class="text-blue" (click)="LoginFormFlag = !LoginFormFlag">Log in</a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+
+
+
 
 <!-- 
 
