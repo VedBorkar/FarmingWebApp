@@ -9,6 +9,11 @@ const routes: Routes = [
       then(x => x.LoginModule)
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./components/admin-layout/admin-layout.module').
+      then(x => x.AdminLayoutModule)
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('./components/farmer-layout/farmer-layout.module').
       then(x => x.FarmerLayoutModule)

@@ -16,7 +16,7 @@ import { DataService } from 'src/app/shared/services/data.service';
 export class FarmComponent {
   public FarmModel: IFarmModel = <IFarmModel>{};
 
-  constructor(public router:Router, private addFarmService: AddFarmService, private authService: DataService) {}
+  constructor(public router: Router, private addFarmService: AddFarmService, private authService: DataService) {}
 
   addFarm(FarmModel = <IFarmModel>{}) {
     FarmModel["farmerID"] = this.authService.getUserID();

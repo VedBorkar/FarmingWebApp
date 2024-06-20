@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FarmerSharedModule } from 'src/app/shared/components/farmer-shared-components.module';
 import { AddCropsComponent } from './add-crops/add-crops.component';
 import { CropsDashboardComponent } from './crops-dashboard/crops-dashboard.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -14,6 +15,7 @@ import { CropsDashboardComponent } from './crops-dashboard/crops-dashboard.compo
   imports: [
     FarmerLayoutRoutingModule,
     FarmerSharedModule,
+    NgSelectModule
   ]
 })
 export class FarmerLayoutModule { }

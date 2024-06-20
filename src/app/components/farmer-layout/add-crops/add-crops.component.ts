@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ICropModel } from 'src/app/shared/model/crop.model';
 import { CropService } from 'src/app/shared/services/crop.service';
@@ -13,8 +13,14 @@ import { DataService } from 'src/app/shared/services/data.service';
     // "../../../../assets/css/style.css"
   ]
 })
-export class AddCropsComponent {
+export class AddCropsComponent implements OnInit{
+
   public CropModel: ICropModel = <ICropModel>{};
+  public cropList: any = {};
+
+  ngOnInit(): void {
+      this.selectMasterCrops();
+  }
 
   constructor(public router:Router, private CropService: CropService, private authService: DataService) {}
 
@@ -30,6 +36,15 @@ export class AddCropsComponent {
         alert(response["data"][0]['Message']);
         this.router.navigate([""]);
       }
-    });
+    });   
+  }
+
+  selectMasterCrops() {
+    this.CropService.selectCropMaster(0).subscribe((response)=>{
+      if(response && response['data']){
+        this.cropList = response['data']
+      }
+    })
   }
 }
+

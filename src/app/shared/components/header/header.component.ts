@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   userFirstName = '';
   userID = 0;
   loggedIn = false;
+  IsAdminFlag = false;
 
   constructor(private authService: DataService) { }
 
@@ -23,6 +24,7 @@ export class HeaderComponent implements OnInit {
     if (this.userID != 0) {
       this.loggedIn = true;
     }
+    this.IsAdminFlag = JSON.parse(localStorage.getItem("IsAdmin") || "");
   }
 
 

@@ -25,11 +25,21 @@ export class LoginComponent {
   verifyCredentials(userCredentialModel: any) {
 
     this.registrationService.userLogIn(userCredentialModel).subscribe((response) => {
-      if (response["successful"] && response["data"].length>0) {  
+      if (response["successful"] && response["data"].length > 0) {
         this.authService.setUserID(response["data"][0]["ID"]);
         this.authService.setUserName(response["data"][0]["FirstName"]);
+        localStorage.setItem("IsAdmin", JSON.stringify(response["data"][0]["IsAdmin"]));
         
-        this.router.navigate(['./dashboard']);
+        switch (response["data"][0]["IsAdmin"]) {
+          case true:
+            this.router.navigate(['./admin']);
+            break;
+
+          default:
+            this.router.navigate(['./dashboard']);
+            break;
+        }
+
       } else {
         alert("Incorrect email or password.\n ")
       }

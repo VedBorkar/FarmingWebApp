@@ -14,7 +14,7 @@ const routes: Routes = [
         component: AdminDashboardComponent
       },
       {
-        path: '',
+        path: 'MasterData',
         component: MasterDataComponent
       }
     ]
